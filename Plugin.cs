@@ -16,9 +16,9 @@ namespace Radioactive_Area
 
 
         public override string Name => "Radioactive Area";
-        public override string Author => "pan andrzej";
-        public override Version Version => new Version(1, 0, 3);
-        public override Version RequiredExiledVersion => new Version(6, 0, 0);
+        public override string Author => "pan_andrzej";
+        public override Version Version => new Version(1, 0, 5);
+        public override Version RequiredExiledVersion => new Version(7, 2, 0);
 
         private EventHandlers EventHandler { get; set; }
 
