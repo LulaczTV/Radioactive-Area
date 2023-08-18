@@ -17,19 +17,14 @@ namespace Radioactive_Area
 
         [Description("Rooms that will be contaminated")]
         public List<RoomType> RoomTypes { get; set; } = new List<RoomType>();
+        [Description("Roles that won't be affected by radiation")]
+        public List<PlayerRoles.RoleTypeId> Roles { get; set; } = new List<PlayerRoles.RoleTypeId>()
+        {
+            PlayerRoles.RoleTypeId.Scp173,
+        };
         [Description("Loaded map name")]
         public string MapName { get; set; } = "MainMap";
-        [Description("Should SCPs take damage?")]
-        public bool SCPsDamage { get; set; } = false;
         [Description("How much damage player take per second. You can use float numbers ex. 1.5, 2.1")]
         public float Damage { get; set; } = 1.1f;
-
-        public bool Scp049 { get; set; } = false;
-        public bool Scp096 { get; set; } = false;
-        public bool Scp106 { get; set; } = false;
-        public bool Scp173 { get; set; } = false;
-        public bool Scp939 { get; set; } = false;
-
-
     }
 }

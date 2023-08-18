@@ -10,7 +10,7 @@ using MapEditorReborn.Events.EventArgs;
 using MEC;
 using System.Collections;
 
-///You know for who
+///some shitty test with MER
 //if (MapEditorReborn.API.API.CurrentLoadedMap.Name != null)
 //{
 //    if (MapEditorReborn.API.API.CurrentLoadedMap.Name.Equals(Plugin.Instance.Config.MapName))
@@ -53,43 +53,13 @@ namespace Radioactive_Area
                 {
                     if (player.CurrentRoom.Type == roomType)
                     {
-                        if (Plugin.Instance.Config.SCPsDamage && player.Role.Team == PlayerRoles.Team.SCPs)
+                        foreach(PlayerRoles.RoleTypeId roleType in Plugin.Instance.Config.Roles)
                         {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
+                            return;
                         }
 
-                        if (player.Role.Side == Side.Mtf || player.Role.Side == Side.ChaosInsurgency)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
-
-                        if (Plugin.Instance.Config.Scp049 && player.Role.Type == PlayerRoles.RoleTypeId.Scp049)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
-                        if (Plugin.Instance.Config.Scp096 && player.Role.Type == PlayerRoles.RoleTypeId.Scp096)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
-                        if (Plugin.Instance.Config.Scp106 && player.Role.Type == PlayerRoles.RoleTypeId.Scp106)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
-                        if (Plugin.Instance.Config.Scp173 && player.Role.Type == PlayerRoles.RoleTypeId.Scp173)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
-                        if (Plugin.Instance.Config.Scp939 && player.Role.Type == PlayerRoles.RoleTypeId.Scp939)
-                        {
-                            player.EnableEffect(EffectType.Poisoned);
-                            player.Hurt(Plugin.Instance.Config.Damage);
-                        }
+                        player.EnableEffect(EffectType.Poisoned);
+                        player.Hurt(Plugin.Instance.Config.Damage);
                     }
                     else
                     {
